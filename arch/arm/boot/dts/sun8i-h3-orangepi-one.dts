@@ -102,6 +102,12 @@
 };
 
 &de {
+	memory-region = <&cma>;
+	status = "okay";
+};
+
+&mali {
+	memory-region = <&cma>;
 	status = "okay";
 };
 

@@ -117,6 +117,18 @@
 		status = "disabled";
 	};
 
+	reserved-memory {
+		#address-cells = <1>;
+		#size-cells = <1>;
+		ranges;
+
+		cma: cma {
+			compatible = "shared-dma-pool";
+			size = <0x8000000>;
+			reusable;
+		};
+	};
+
 	soc {
 		display_clocks: clock@1000000 {
 			compatible = "allwinner,sun8i-a83t-de2-clk";
@@ -130,7 +142,7 @@
 			#reset-cells = <1>;
 			assigned-clocks = <&ccu CLK_DE>;
 			assigned-clock-parents = <&ccu CLK_PLL_DE>;
-			assigned-clock-rates = <432000000>;
+			assigned-clock-rates = <384000000>;
 		};
 
 		mixer0: mixer@1100000 {
