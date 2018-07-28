@@ -41,6 +41,8 @@
  */
 
 #include "sunxi-h3-h5.dtsi"
+#include <dt-bindings/clock/sun8i-de2.h>
+#include <dt-bindings/reset/sun8i-de2.h>
 
 / {
 	cpus {
